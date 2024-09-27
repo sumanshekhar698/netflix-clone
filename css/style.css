@@ -1,0 +1,269 @@
+:root {
+  --primary-color: #e50914;
+  --primary-color-red-hover: #c90017;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  background: #000000;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  color: #fff;
+}
+
+
+.showcase {
+
+  /* add a black tint */
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../img/landing-background.jpg') no-repeat center center/cover;
+  height: 100vh;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center; */
+}
+
+#showcase-content {
+  background: transparent;
+}
+
+#navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background: transparent;
+
+}
+
+#navbar>img {
+  width: 200px;
+}
+
+#language-dropdown {
+  appearance: none;
+  /* Remove default browser styling */
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  /* border: 1px solid #ccc; */
+  margin-right: 10px;
+
+  border-radius: 3px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+
+.netflix-button {
+  background-color: var(--primary-color);
+  color: #fff;
+  font-size: 16px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+
+}
+
+.netflix-button:hover {
+  background-color: var(--primary-color-red-hover);
+}
+
+#showcase-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 70%;
+}
+
+#showcase-content h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+#showcase-content h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+#showcase-content p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  color: #ccc;
+}
+
+.input-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.input-group input {
+  padding: 15px 50px;
+  /* width: 60%; */
+  border-radius: 3px;
+  font-size: 16px;
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid #ccc;
+  transition: border-color 0.3s ease-in-out;
+}
+
+.input-group input:focus {
+  outline: none;
+  border: 2px solid var(--primary-color);
+}
+
+#email_box:focus::placeholder {
+  font-size: 12px;
+  /* Adjust the font size as needed */
+  transition: font-size 0.3s ease-in-out, transform 0.3s ease-in-out;
+  transform: translateY(-10px);
+  /* Adjust the translation value as needed */
+}
+
+#email_box::placeholder {
+  color: rgb(182, 174, 174);
+  text-align: left;
+}
+
+.input-group button {
+  padding: 15px 20px;
+  background-color: var(--primary-color);
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  border-radius: 3px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.input-group button:hover {
+  background-color: var(--primary-color-red-hover);
+}
+
+#arrow {
+  /* font-size: 2rem; */
+  color: #fff;
+  animation: identifier 1s infinite ease-in-out;
+  background: transparent;
+}
+
+@keyframes identifier {
+  0% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(10px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+
+}
+
+#trending h1 {
+  text-align: left;
+  font-size: 2rem;
+  margin-top: 50px;
+  margin-left: 200px;
+  margin-bottom: 50px;
+}
+
+
+.trending-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.trending-card {
+  background-color: #2c0f07;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+  width: 300px;
+}
+
+.trending-card:hover{
+  background-color: #3d1a0f;
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+  /* zoom */
+  transform: scale(1.1);
+
+}
+
+.trending-card img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.trending-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  flex-direction: column;
+  background: transparent;
+}
+
+.trending-info h3 {
+  font-size: 1.5rem;
+  background: transparent;
+}
+
+
+/* Media Queries */
+
+@media screen and (max-width: 768px) {
+  #navbar>img {
+    width: 100px;
+  }
+
+  .input-group {
+    flex-direction: column;
+  }
+
+  #navbar {
+    padding: 20px;
+  }
+
+  #showcase-content h1 {
+    font-size: 2.5rem;
+  }
+
+  #showcase-content h2 {
+    font-size: 1.5rem;
+  }
+
+  #showcase-content p {
+    font-size: 1rem;
+  }
+
+  .input-group input {
+    width: 80%;
+  }
+
+  .input-group button {
+    font-size: 14px;
+  }
+}
